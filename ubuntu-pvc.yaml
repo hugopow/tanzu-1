@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ubuntu-pvc
+  labels:
+    storage-tier: tanzu-demo-storage
+    availability-zone: home
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: tanzu-demo-storage
+  resources:
+    requests:
+        storage: 16Gi
